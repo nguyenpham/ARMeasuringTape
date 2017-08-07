@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13168.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARMeasuringTap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hok-a6-fnT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdt-pL-SgD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
+                            </arscnView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target" translatesAutoresizingMaskIntoConstraints="NO" id="pLz-JA-qFs">
+                                <rect key="frame" x="163.5" y="319.5" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="UTi-QF-mJa"/>
+                                    <constraint firstAttribute="width" constant="48" id="ktc-N2-uLl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFh-9y-YBR">
+                                <rect key="frame" x="137" y="390" width="100" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.950689169" blue="0.62740124500000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4E2-Dc-ufR"/>
+                                    <constraint firstAttribute="width" constant="100" id="mEP-Gx-w22"/>
+                                </constraints>
+                                <state key="normal" title="Start / Stop"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startBtnTouchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="2Lh-nf-hab"/>
+                                </connections>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-w9-AtG">
+                                <rect key="frame" x="10" y="22" width="355" height="46"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="REe-OR-vwD">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="46"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep the middle target 20cm above the starting point, tap yellow button to start " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kww-oD-02f">
+                                            <rect key="frame" x="8" y="0.0" width="335" height="46"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Kww-oD-02f" firstAttribute="width" secondItem="REe-OR-vwD" secondAttribute="width" constant="-20" id="3z7-nh-t3w"/>
+                                        <constraint firstItem="Kww-oD-02f" firstAttribute="height" secondItem="REe-OR-vwD" secondAttribute="height" id="AV3-ms-Pwi"/>
+                                        <constraint firstItem="Kww-oD-02f" firstAttribute="centerX" secondItem="REe-OR-vwD" secondAttribute="centerX" constant="-2" id="iwr-vg-SfN"/>
+                                        <constraint firstItem="Kww-oD-02f" firstAttribute="centerY" secondItem="REe-OR-vwD" secondAttribute="centerY" id="rle-SI-H0y"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="8"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="U04-NF-bej"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                            <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RLE-MS-si5">
+                                <rect key="frame" x="247" y="390" width="80" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="iH2-oH-tnK"/>
+                                    <constraint firstAttribute="width" constant="80" id="sbV-Rx-zbv"/>
+                                </constraints>
+                                <state key="normal" title="Cancel"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancelBtnTouchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="yCs-0L-S3a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RLE-MS-si5" firstAttribute="top" secondItem="VFh-9y-YBR" secondAttribute="bottom" constant="-60" id="207-gf-3tO"/>
+                            <constraint firstItem="RLE-MS-si5" firstAttribute="leading" secondItem="VFh-9y-YBR" secondAttribute="trailing" constant="10" id="JwP-lU-rLn"/>
+                            <constraint firstItem="qc0-w9-AtG" firstAttribute="leading" secondItem="Y5G-SZ-DKF" secondAttribute="leading" constant="10" id="OYg-kE-gGU"/>
+                            <constraint firstItem="tdt-pL-SgD" firstAttribute="bottom" secondItem="Y5G-SZ-DKF" secondAttribute="bottom" constant="10" id="avP-oc-LWj"/>
+                            <constraint firstItem="Y5G-SZ-DKF" firstAttribute="trailing" secondItem="qc0-w9-AtG" secondAttribute="trailing" constant="10" id="bep-zf-QsT"/>
+                            <constraint firstItem="qc0-w9-AtG" firstAttribute="top" secondItem="Y5G-SZ-DKF" secondAttribute="top" constant="2" id="d9D-if-w62"/>
+                            <constraint firstItem="tdt-pL-SgD" firstAttribute="width" secondItem="hok-a6-fnT" secondAttribute="width" id="jEx-vb-nYZ"/>
+                            <constraint firstItem="VFh-9y-YBR" firstAttribute="centerX" secondItem="Y5G-SZ-DKF" secondAttribute="centerX" id="jmG-Av-QDc"/>
+                            <constraint firstItem="tdt-pL-SgD" firstAttribute="centerX" secondItem="Y5G-SZ-DKF" secondAttribute="centerX" id="otz-Iv-4cd"/>
+                            <constraint firstItem="pLz-JA-qFs" firstAttribute="centerY" secondItem="Y5G-SZ-DKF" secondAttribute="centerY" id="pGk-UF-BOr"/>
+                            <constraint firstItem="Y5G-SZ-DKF" firstAttribute="top" secondItem="tdt-pL-SgD" secondAttribute="top" constant="20" id="sd5-Y8-VU2"/>
+                            <constraint firstItem="VFh-9y-YBR" firstAttribute="top" secondItem="pLz-JA-qFs" secondAttribute="bottom" constant="22.5" id="tGF-xD-j6v"/>
+                            <constraint firstItem="pLz-JA-qFs" firstAttribute="centerX" secondItem="Y5G-SZ-DKF" secondAttribute="centerX" id="wG3-26-HwS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Y5G-SZ-DKF"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelBtn" destination="RLE-MS-si5" id="NUr-dZ-pK8"/>
+                        <outlet property="infoLabel" destination="Kww-oD-02f" id="Ix8-Ur-NF8"/>
+                        <outlet property="sceneView" destination="tdt-pL-SgD" id="cgA-DU-VY4"/>
+                        <outlet property="startBtn" destination="VFh-9y-YBR" id="8dw-wB-FB9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="target" width="64" height="64"/>
+    </resources>
+</document>
